@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>فودايس - Foodys</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet"/>
+  
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">  <img src="c:\xampp\logo.jpg" style="width: 100px !important; height: 100px !important;"></div>
+
+      <h1>FOODYS</h1>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon"><img src="c:\xampp\logo.jpg" style="width: 100px !important; height: 100px !important;"></span>
+      <span class="logo-text">FOODYS</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">الرئيسية</a></li>
+      <li><a href="#menu">المنيو</a></li>
+      <li><a href="#about">من نحن</a></li>
+      <li><a href="#contact">تواصل</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-btn" id="themeBtn"><i class="fas fa-moon"></i></button>
+      <button class="cart-btn" id="cartBtn">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+ <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">الرئيسية</a>
+    <a href="#menu">المنيو</a>
+    <a href="#about">من نحن</a>
+    <a href="#contact">تواصل</a>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="hero-badge">🔥 الأفضل في المدينة</div>
+      <h1 class="hero-title">
+        أشهى <span class="highlight">الوجبات</span><br/>تبدأ من هنا
+      </h1>
+      <p class="hero-subtitle">معجنات طازجة • بيتزا فاخرة • أكلات شعبية أصيلة</p>
+      <div class="hero-btns">
+        <a href="#menu" class="btn-primary">اطلب الحين 🚀</a>
+        <a href="#about" class="btn-secondary">اعرف أكثر</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-target="500">0</span><span>+</span><p>طبق يومياً</p></div>
+        <div class="stat"><span class="stat-num" data-target="98">0</span><span>%</span><p>رضا العملاء</p></div>
+        <div class="stat"><span class="stat-num" data-target="50">0</span><span>+</span><p>صنف متنوع</p></div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="floating-card card1">🍕 مطعم فودايس</div>
+      <div class="floating-card card2">⭐ 4.9 تقييم</div>
+      <div class="floating-card card3">🚀 توصيل سريع</div>
+      <div class="hero-circle">
+        <span class="big-emoji"><img src="c:\xampp\logo.jpg" style="width: 250px !important; height: 250px !important;"></span>
+      </div>
+    </div>
+  </section>
+  <section class="features">
+    <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>توصيل سريع</h3>
+      <p>نوصلك في أقل من 30 دقيقة</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌿</div>
+      <h3>مكونات طازجة</h3>
+      <p>نستخدم أفضل المكونات الطازجة يومياً</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">👨‍🍳</div>
+      <h3>طباخون محترفون</h3>
+      <p>فريق من أمهر الطباخين</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💰</div>
+      <h3>أسعار مناسبة</h3>
+      <p>جودة عالية بأسعار في متناول الجميع</p>
+    </div>
+  </section>
+
+  <section class="menu-section" id="menu">
+    <div class="section-header">
+      <h2>منيونا 🍽️</h2>
+      <p>اختر من بين أشهى الأصناف</p>
+    </div>
+    <div class="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="ابحث عن أي صنف..."/>
+    </div>
+    <div class="filter-btns">
+      <button class="filter-btn active" data-filter="all">الكل</button>
+      <button class="filter-btn" data-filter="pizza">🍕 بيتزا</button>
+      <button class="filter-btn" data-filter="pastry">🌯 معجنات</button>
+      <button class="filter-btn" data-filter="arabic">🍲 عربي</button>
+      <button class="filter-btn" data-filter="shaabi">🥙 شعبي</button>
+      <button class="filter-btn" data-filter="drink">🥤 مشروبات</button>
+    </div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </section>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>🛒 سلة الطلبات</h3>
+      <button id="closeCart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">
+        <span>🛒</span>
+        <p>سلتك فارغة</p>
+      </div>
+    </div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>المجموع:</span>
+        <span id="cartTotal">0 LD</span>
+      </div>
+      <button class="btn-primary" id="checkoutBtn">تأكيد الطلب 🎉</button>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup">
+      <div class="popup-icon">🎉</div>
+      <h3>تم الطلب بنجاح!</h3>
+      <p>شكراً لك، طلبك في الطريق إليك 🚀</p>
+      <button id="closePopup">حسناً</button>
+    </div>
+  </div>
+
+ <section class="about-section" id="about">
+    <div class="about-content">
+      <h2>من نحن؟ 🏆</h2>
+      <p>فودايس مطعم متخصص في تقديم أشهى المعجنات والبيتزا والأكلات الشعبية والعربية الأصيلة. نؤمن بأن الطعام الجيد يجمع الناس ويصنع الذكريات.</p>
+      <div class="about-features">
+        <div class="about-item"><i class="fas fa-check-circle"></i> جودة لا تُضاهى</div>
+        <div class="about-item"><i class="fas fa-check-circle"></i> خدمة ممتازة</div>
+        <div class="about-item"><i class="fas fa-check-circle"></i> مكونات طبيعية 100%</div>
+        <div class="about-item"><i class="fas fa-check-circle"></i> أسعار منافسة</div>
+      </div>
+    </div>
+    <div class="about-image">
+      <div class="about-circle">👨‍🍳</div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <div class="section-header">
+      <h2>ماذا يقول عملاؤنا؟ ⭐</h2>
+    </div>
+    <div class="testimonial-slider" id="testimonialSlider">
+      <div class="testimonial-card active">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"أفضل بيتزا جربتها في حياتي! العجينة طازجة والمكونات رائعة"</p>
+        <h4>- أحمد سعيد</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"المعجنات مذهلة والخدمة سريعة جداً، أنصح الجميع بتجربة فودايس"</p>
+        <h4>- فاطمة الزهراء</h4>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p>"الأكلات الشعبية عندهم تذكرني بأكل بيتنا، طعم أصيل ورائع"</p>
+ <h4>- محمد أمين</h4>
+      </div>
+    </div>
+    <div class="testimonial-dots" id="testimonialDots"></div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="section-header">
+      <h2>تواصل معنا 📞</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <div>
+            <h4>اتصل بنا</h4>
+            <p>0940013002</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h4>موقعنا</h4>
+            <p>الزاوية /طريق المنقع</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-clock"></i>
+          <div>
+            <h4>أوقات العمل</h4>
+            <p>11 صباحاً - 12 منتصف الليل</p>
+          </div>
+        </div>
+      </div>
+ <form class="contact-form" id="contactForm">
+        <input type="text" placeholder="اسمك" required/>
+        <input type="tel" placeholder="رقم هاتفك" required/>
+        <textarea placeholder="رسالتك أو طلبك..." rows="4" required></textarea>
+        <button type="submit">إرسال 🚀</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo"> <img src="c:\xampp\logo.jpg" style="width: 30px !important; height: 30px !important;" ><span> FOODYS </span></div>
+      
+      <p>© 2026 Foodays - جميع الحقوق محفوظة</p>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="chatbot-container" id="chatbot">
+    <div class="chatbot-header">
+      <span>🤖 مساعد فودايس</span>
+      <button id="closeChatbot"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chatbot-messages" id="chatMessages">
+      <div class="bot-message">أهلاً! 👋 كيف أقدر أساعدك؟</div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" id="chatInput" placeholder="اكتب سؤالك..."/>
+      <button id="sendChat"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+  <button class="chatbot-toggle" id="chatbotToggle">🤖</button>
+  <!-- ORDER MODAL -->
+<div class="modal-overlay" id="orderModal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeOrder"><i class="fas fa-times"></i></button>
+    <h2>📋 تأكيد الطلب</h2>
+    
+    <form id="orderForm">
+      <div class="form-group">
+        <label>الاسم الكامل</label>
+        <input type="text" id="orderName" placeholder="أدخل اسمك" required />
+      </div>
+      <div class="form-group">
+        <label>رقم الهاتف</label>
+        <input type="tel" id="orderPhone" placeholder="05XXXXXXXX" required />
+      </div>
+      <div class="form-group">
+        <label>العنوان</label>
+        <input type="text" id="orderAddress" placeholder="حيك أو شارعك" required />
+      </div>
+      <div class="form-group">
+        <label>ملاحظات (اختياري)</label>
+        <textarea id="orderNotes" placeholder="أي طلب خاص..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary" style="width:100%; margin-top:10px;">
+        إرسال عبر واتساب 📲
+      </button>
+    </form>
+  </div>
+</div>
+
+
+  <script src="javascript.js"></script>
+  <script src="script.js"></script>
+  
+</body>
+</html>
