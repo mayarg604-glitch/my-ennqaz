@@ -190,7 +190,7 @@ const cartItems = document.getElementById('cartItems');
   }
   cartItems.innerHTML = cart.map(item => `
     <div class="cart-item">
-      <span class="cart-item-emoji">${item.emoji}</span>
+      <img src="${item.image}" class="cart-item-image" style="width: 50px; height: 50px; object-fit: cover; border-radius: 5px;">
       <div class="cart-item-info">
         <h4>${item.name}</h4>
         <p>${item.price * item.qty} LD </p>
