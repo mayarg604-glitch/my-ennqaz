@@ -352,10 +352,10 @@ document.getElementById('orderForm').addEventListener('submit', (e) => {
   message += `\n🛒 *الطلب:*\n`;
 
   cart.forEach(item => {
-    message += `• ${item.name} × ${item.qty} = ${item.price * item.qty} دج\n`;
+    message += `• ${item.name} × ${item.qty} = ${item.price * item.qty} LD\n`;
   });
 
-  message += `\n💰 *المجموع: ${total} دج*`;
+  message += `\n💰 *المجموع: ${total} LD*`;
 
   if (notes) {
     message += `\n📝 *ملاحظات:* ${notes}`;
