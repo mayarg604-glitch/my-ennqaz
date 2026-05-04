@@ -361,7 +361,7 @@ document.getElementById('orderForm').addEventListener('submit', (e) => {
     message += `\n📝 *ملاحظات:* ${notes}`;
   }
 
-  const restaurantPhone = '213XXXXXXXXX'; // ← غيّر برقمك
+  const restaurantPhone = '0940013002'; // ← غيّر برقمك
   const url = `https://wa.me/${restaurantPhone}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
 
